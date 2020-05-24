@@ -96,7 +96,7 @@ class UserController {
             from: 'admin@test.com',
             to: postData.email,
             subject: 'Chat App Email Confirmation',
-            html: `In order to confirm the mail, follow this link <a href="http://localhost:3000/signup/verify?hash=${obj.confirm_hash}">`
+            html: `In order to confirm the mail, follow this <a href="http://localhost:3000/signup/verify?hash=${obj.confirm_hash}">link</a>`
           },
           function(err: any, info: any) {
             if (err) {

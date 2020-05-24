@@ -95,8 +95,8 @@ class UserController {
           {
             from: 'admin@test.com',
             to: postData.email,
-            subject: 'Подтверждение почты React Chat Tutorial',
-            html: `Для того, чтобы подтвердить почту, перейдите <a href="http://localhost:3000/signup/verify?hash=${obj.confirm_hash}">по этой ссылке</a>`
+            subject: 'Chat App Email Confirmation',
+            html: `In order to confirm the mail, follow this link <a href="http://localhost:3000/signup/verify?hash=${obj.confirm_hash}">`
           },
           function(err: any, info: any) {
             if (err) {
@@ -141,7 +141,7 @@ class UserController {
 
         res.json({
           status: 'success',
-          message: 'Аккаунт успешно подтвержден!'
+          message: 'Հաշիվը հաջողությամբ հաստատվեց'
         });
       });
     });

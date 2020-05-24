@@ -17,12 +17,12 @@ const getMessageTime = createdAt => {
 const renderLastMessage = (message, userId) => {
   let text = '';
   if (!message.text && message.attachments.length) {
-    text = 'прикрепленный файл';
+    text = 'կցված ֆայլը';
   } else {
     text = message.text;
   }
 
-  return `${message.user._id === userId ? 'Вы: ' : ''}${text}`;
+  return `${message.user._id === userId ? 'Դուք: ' : ''}${text}`;
 };
 
 const DialogItem = ({

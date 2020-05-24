@@ -29,8 +29,8 @@ const Actions = {
       .then(({ data }) => {
         const { token } = data;
         openNotification({
-          title: 'Отлично!',
-          text: 'Авторизация успешна.',
+          title: 'Հիանալի է։',
+          text: 'Մուտքը հաջող էր։',
           type: 'success',
         });
         window.axios.defaults.headers.common['token'] = token;

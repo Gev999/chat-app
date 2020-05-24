@@ -24,7 +24,7 @@ const Actions = {
     payload: bool
   }),
   removeMessageById: id => dispatch => {
-    if (window.confirm("Вы действительно хотите удалить сообщение?")) {
+    if (window.confirm("Համոզվա՞ծ եք, որ ցանկանում եք ջնջել հաղորդագրությունը:")) {
       messagesApi
         .removeById(id)
         .then(({ data }) => {

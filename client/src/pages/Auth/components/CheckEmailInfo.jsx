@@ -9,21 +9,21 @@ const renderTextInfo = ({ hash, verified }) => {
     if (verified) {
       return {
         status: 'success',
-        title: 'Готово!',
-        message: 'Аккаунт успешно подтвержден!',
+        title: 'Պատրաստ է',
+        message: 'Հաշիվը հաջողությամբ հաստատվեց',
       };
     } else {
       return {
         status: 'error',
         title: 'Սխալ',
-        message: 'Вы указали несуществующий или неверный хеш.',
+        message: 'Դուք նշել եք գոյություն չունեցող կամ անվավեր հեշ',
       };
     }
   } else {
     return {
       status: 'info',
-      title: 'Подтвердите почту',
-      message: 'Ссылка с подтверждением аккаунта отправлена на E-Mail.',
+      title: 'Հաստատեք փոստը',
+      message: 'Հաշվի հաստատման հղումը ուղարկվել է էլ. փոստին',
     };
   }
 };
@@ -67,7 +67,7 @@ const CheckEmailInfo = ({ location, history }) => {
               info.status === 'success' &&
               verified && (
                 <Button type="primary" onClick={() => history.push('/signin')}>
-                  Войти
+                  Մուտք
                 </Button>
               )
             }

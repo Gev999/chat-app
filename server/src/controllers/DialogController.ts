@@ -53,7 +53,7 @@ class DialogController {
         if (user) {
           return res.status(403).json({
             status: 'error',
-            message: 'Такой диалог уже есть',
+            message: 'Նման երկխոսությունն արդեն կա',
           });
         } else {
           const dialog = new DialogModel(postData);

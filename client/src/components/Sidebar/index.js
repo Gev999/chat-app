@@ -31,7 +31,7 @@ const Sidebar = ({
       <div className="chat__sidebar-header">
         <div>
           <Icon type="team" />
-          <span>Список диалогов</span>
+          <span>Երկխոսության ցուցակ</span>
         </div>
         <Button onClick={onShow} type="link" shape="circle" icon="form" />
       </div>
@@ -40,12 +40,12 @@ const Sidebar = ({
         <Dialogs userId={user && user._id} />
       </div>
       <Modal
-        title="Создать диалог"
+        title="Ստեղծեք երկխոսություն"
         visible={visible}
         onCancel={onClose}
         footer={[
           <Button key="back" onClick={onClose}>
-            Закрыть
+            Փակել
           </Button>,
           <Button
             disabled={!messageText}
@@ -53,11 +53,11 @@ const Sidebar = ({
             type="primary"
             loading={isLoading}
             onClick={onModalOk}>
-            Создать
+            Ստեղծել
           </Button>,
         ]}>
         <Form className="add-dialog-form">
-          <Form.Item label="Введите имя пользователя или E-Mail">
+          <Form.Item label="Մուտքագրեք օգտվողի անունը կամ էլ․ փոստը">
             <Select
               value={inputValue}
               onSearch={onSearch}
@@ -68,13 +68,13 @@ const Sidebar = ({
               defaultActiveFirstOption={false}
               showArrow={false}
               filterOption={false}
-              placeholder="Введите имя пользователя или почту"
+              placeholder="Մուտքագրեք օգտվողի անունը կամ էլ․ փոստը"
               showSearch>
               {options}
             </Select>
           </Form.Item>
           {selectedUserId && (
-            <Form.Item label="Введите текст сообщения">
+            <Form.Item label="Մուտքագրեք հաղորդագրության տեքստը">
               <TextArea
                 autosize={{ minRows: 3, maxRows: 10 }}
                 onChange={onChangeTextArea}

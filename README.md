@@ -1,0 +1,1 @@
+<h1>React + Express + Socket.io chat application</h1>

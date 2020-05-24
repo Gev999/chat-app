@@ -24,7 +24,7 @@ const Messages = ({
     <div className="chat__dialog-messages" style={{ height: `calc(100% - ${blockHeight}px)` }}>
       <div ref={blockRef} className={classNames('messages', { 'messages--loading': isLoading })}>
         {isLoading && !user ? (
-          <Spin size="large" tip="Загрузка сообщений..." />
+          <Spin size="large" tip="Հաղորդագրությունների ներբեռնում..." />
         ) : items && !isLoading ? (
           items.length > 0 ? (
             items.map(item => (
@@ -37,10 +37,10 @@ const Messages = ({
               />
             ))
           ) : (
-            <Empty description="Диалог пуст" />
+            <Empty description="Երկխոսությունը դատարկ է" />
           )
         ) : (
-          <Empty description="Откройте диалог" />
+          <Empty description="Բացեք երկխոսությունը" />
         )}
         {isTyping && <Message isTyping={true} user={partner} />}
         <Modal visible={!!previewImage} onCancel={() => setPreviewImage(null)} footer={null}>
